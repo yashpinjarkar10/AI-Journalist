@@ -1,73 +1,129 @@
-AI-Journalist
-AI-Journalist is an advanced news aggregation and reporting tool powered by artificial intelligence. It collects, analyzes, and summarizes news from diverse sources, including Reddit and major news outlets, and offers text-to-speech functionality for seamless, hands-free news consumption.
-Features
-
-Multi-Source Scraping: Gathers news from Reddit and prominent news websites.
-AI-Powered Summarization: Analyzes and condenses articles into concise summaries.
-Text-to-Speech (TTS): Generates audio summaries for convenient listening.
-Modular Architecture: Easily extensible backend for adding new features.
-User-Friendly Interface: Professional and intuitive design for seamless interaction.
-
-Installation
-
-Clone the Repository:git clone https://github.com/yashpinjarkar10/AI-Journalist.git
-cd AI-Journalist
 
 
-Set Up a Virtual Environment:python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\Activate
+# 🧠 AI-Journalist
 
+**AI-Journalist** is an intelligent news aggregation and reporting tool that leverages artificial intelligence to **collect**, **analyze**, and **summarize** news from various sources, including Reddit and major news outlets. It also features **automated text-to-speech** capabilities for hands-free news consumption.
 
-Install Dependencies:pip install -r requirements.txt
+---
 
+## ✨ Features
 
+* 🔍 **Multi-source news scraping** (Reddit, news websites)
+* 🧠 **AI-powered summarization** and analysis
+* 🔊 **Text-to-speech** audio generation
+* 🧩 **Modular backend** for easy extension and customization
+* 💻 **Professional & user-friendly interface**
 
-Usage
+---
 
-Run the Application:python main.py
+## ⚙️ Installation
 
+1. **Clone the repository:**
 
+   ```powershell
+   git clone https://github.com/yashpinjarkar10/AI-Journalist.git
+   cd AI-Journalist
+   ```
 
-Technologies Used
+2. **Create and activate a virtual environment:**
 
-Python 3.10+: Core programming language for the application.
-BeautifulSoup & Requests: Tools for web scraping and data extraction.
-PRAW: Python Reddit API Wrapper for accessing Reddit posts.
-Text-to-Speech (TTS): Libraries like gTTS or pyttsx3 for audio generation.
-FastAPI or Flask: Backend framework for API development (if applicable).
-Additional Libraries: Refer to requirements.txt for a complete list.
+   ```powershell
+   python -m venv .venv
+   & .venv\Scripts\Activate.ps1
+   ```
 
-Workflow
+3. **Install dependencies:**
 
-Scraping: Collects news articles and Reddit posts using dedicated scrapers (news_scraper.py, reddit_scraper.py).
-Processing: Cleans and summarizes content with AI models and utility functions (utils.py).
-Audio Generation: Converts summaries to audio files, saved in the audio/ directory.
-Serving: Backend (backend.py) provides API endpoints for news and audio access.
-Main Application: Orchestrates the entire workflow (main.py).
+   ```powershell
+   pip install -r requirements.txt
+   ```
 
-Workflow Diagram
-graph TD
-    A[Sources] -->|news_scraper.py, reddit_scraper.py| B[Raw News Data]
-    B -->|utils.py| C[Summarized Content]
-    C -->|TTS Engine| D[Audio Files]
-    D -->|backend.py| E[API / User Interface]
+---
 
-Example Output
+## 🚀 Usage
 
-Text Summary:
-AI-Journalist aggregates the latest news and delivers concise summaries for quick consumption.
+Run the main application:
 
+```powershell
+python main.py
+```
 
-Audio File:
-Saved as audio/tts_YYYYMMDD_HHMMSS.mp3
+---
 
+## 🧰 Technologies Used
 
+* **Python 3.10+** — Core programming language
+* **BeautifulSoup & Requests** — Web scraping and data extraction
+* **PRAW** — Reddit API integration
+* **gTTS / pyttsx3** — Text-to-speech audio generation
+* **FastAPI / Flask** — Backend API
+* **More** — See `requirements.txt` for the full list
 
-Module Overview
+---
 
-main.py: Entry point for the application, coordinating workflow and user interaction.
-news_scraper.py: Scrapes articles from news websites.
-reddit_scraper.py: Retrieves posts from Reddit using the PRAW library.
-models.py: Defines data structures for articles and summaries.
-utils.py: Provides utility functions for data cleaning, summarization, and formatting.
-backend.py: Implements the API server for serving news and audio summaries.
+## 🔄 Workflow
+
+1. **Scraping** — Collects news articles and Reddit posts via:
+
+   * `news_scraper.py`
+   * `reddit_scraper.py`
+
+2. **Processing** — Cleans and summarizes content using AI utilities from `utils.py`
+
+3. **Audio Generation** — Converts summaries into MP3 audio using a TTS engine
+
+4. **Serving** — Serves content and audio files via API (`backend.py`)
+
+5. **Orchestration** — Ties everything together through `main.py`
+
+---
+
+### 📊 Workflow Diagram
+
+```
+[Sources]
+   | (news_scraper.py, reddit_scraper.py)
+   v
+[Raw News Data]
+   | (utils.py)
+   v
+[Summarized Content]
+   | (TTS Engine)
+   v
+[Audio Files]
+   | (backend.py)
+   v
+[API / User Interface]
+```
+
+---
+
+## 🧪 Example Output
+
+* **Text Summary:**
+
+  > "AI-Journalist aggregates the latest news and provides concise summaries for quick reading."
+
+* **Audio File:**
+
+  > Saved as: `audio/tts_YYYYMMDD_HHMMSS.mp3`
+
+---
+
+## 📁 Module Overview
+
+| File                | Purpose                                                 |
+| ------------------- | ------------------------------------------------------- |
+| `main.py`           | Entry point, manages overall workflow and orchestration |
+| `news_scraper.py`   | Scrapes news websites                                   |
+| `reddit_scraper.py` | Scrapes Reddit posts via PRAW                           |
+| `models.py`         | Data models for articles and summaries                  |
+| `utils.py`          | Utility functions for cleaning, summarizing, formatting |
+| `backend.py`        | FastAPI/Flask server for API access                     |
+
+---
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).
+
