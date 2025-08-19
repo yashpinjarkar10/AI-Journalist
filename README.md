@@ -52,11 +52,11 @@ python main.py
 
 ## 🧰 Technologies Used
 
-* **Python 3.10+** — Core programming language
+* **Python** — Core programming language
 * **BeautifulSoup & Requests** — Web scraping and data extraction
 * **PRAW** — Reddit API integration
-* **gTTS / pyttsx3** — Text-to-speech audio generation
-* **FastAPI / Flask** — Backend API
+* **gTTS** — Text-to-speech audio generation
+* **FastAPI** — Backend API
 * **More** — See `requirements.txt` for the full list
 
 ---
@@ -126,4 +126,5 @@ python main.py
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
+
 
